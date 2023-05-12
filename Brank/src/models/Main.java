@@ -98,7 +98,7 @@ public class Main {
                 Conta contaDestino = bank.getContaByNumero(destino);
                 bank.Transferir(contaOrigem, contaDestino, valor);
                 
-                System.out.println("R$" + valor + " foram transferidos da conta " + contaOrigem + " para a conta " + contaDestino + "com sucesso!");
+                System.out.println("R$" + valor + " foram transferidos da conta " + contaOrigem + " para a conta " + contaDestino + " com sucesso!");
                 
                 break;
 
