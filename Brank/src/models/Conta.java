@@ -1,16 +1,16 @@
 package models;
 
-public abstract class Conta {
-    protected int numero;
+public abstract class Conta implements Tributavel {
+    protected String numero;
     protected int agencia;
     protected String banco;
     protected double saldo;
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -36,7 +36,15 @@ public abstract class Conta {
         this.saldo = saldo;
     }
 
-    public Conta(int numero, int agencia, String banco, double saldo) {
+    public void depositar(double valor) {
+        this.saldo += valor;
+    }
+
+    public void sacar(double valor) {
+        this.saldo -= valor;
+    }
+
+    public Conta(String numero, int agencia, String banco, double saldo) {
         this.numero = numero;
         this.agencia = agencia;
         this.banco = banco;
