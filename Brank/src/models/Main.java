@@ -41,6 +41,7 @@ public class Main {
                 ContaCorrente cc1 = new ContaCorrente(numero, agencia, banco, saldo, chequeEspecial);
                 bank.addNovaConta(cc1);
 
+                System.out.println(" ");
                 System.out.println("Nova conta corrente cadastrada com sucesso!");
 
                 break;
@@ -62,6 +63,7 @@ public class Main {
                 ContaPoupanca cp1 = new ContaPoupanca(numero, agencia, banco, saldo, diaAniversario, juros);
                 bank.addNovaConta(cp1);
 
+                System.out.println(" ");
                 System.out.println("Nova conta poupança cadastrada com sucesso!");
 
                 break;
@@ -81,6 +83,7 @@ public class Main {
                 ContaSalario cs1 = new ContaSalario(numero, agencia, banco, saldo, salario);
                 bank.addNovaConta(cs1);
 
+                System.out.println(" ");
                 System.out.println("Conta salário cadastrada com sucesso!");
 
                 break;
@@ -97,6 +100,7 @@ public class Main {
                 Conta contaDestino = bank.getContaByNumero(destino);
                 bank.Transferir(contaOrigem, contaDestino, valor);
                 
+                System.out.println(" ");
                 System.out.println("R$" + valor + " foram transferidos da conta " + contaOrigem + " para a conta " + contaDestino + " com sucesso!");
                 
                 break;
