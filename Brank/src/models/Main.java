@@ -76,7 +76,7 @@ public class Main {
                 banco = scanner.next();
                 System.out.print("Indique o saldo inicial da conta: ");
                 saldo = Double.parseDouble(scanner.next());
-                System.out.println("Indique o salário: ");
+                System.out.print("Indique o salário: ");
                 double salario = Double.parseDouble(scanner.next());
 
                 ContaSalario cs1 = new ContaSalario(numero, agencia, banco, saldo, salario);
