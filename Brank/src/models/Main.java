@@ -57,7 +57,7 @@ public class Main {
                 saldo = Double.parseDouble(scanner.next());
                 System.out.print("Digite o dia do aniversário: ");
                 int diaAniversario = Integer.parseInt(scanner.next());
-                System.out.println("Indique o juros: ");
+                System.out.print("Indique o juros: ");
                 double juros = Double.parseDouble(scanner.next());
 
                 ContaPoupanca cp1 = new ContaPoupanca(numero, agencia, banco, saldo, diaAniversario, juros);
