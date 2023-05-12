@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class Main {
     static Banco bank = new Banco();
-    static Banco transferir = new Banco();
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
