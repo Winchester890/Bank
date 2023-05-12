@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     static Banco bank = new Banco();
+    static Banco transferir = new Banco();
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         int opcao = 0;
@@ -28,7 +29,7 @@ public class Main {
         switch(opcao) {
             case 1:
                 System.out.print("Digite o número da conta: ");
-                int numero = Integer.parseInt(scanner.next());
+                String numero = scanner.next();
                 System.out.print("Digite a agência: ");
                 int agencia = Integer.parseInt(scanner.next());
                 System.out.print("Indique o banco: ");
@@ -47,7 +48,7 @@ public class Main {
 
             case 2:
                 System.out.print("Digite o número da conta: ");
-                numero = Integer.parseInt(scanner.next());
+                numero = scanner.next();
                 System.out.print("Digite a agência: ");
                 agencia = Integer.parseInt(scanner.next());
                 System.out.print("Indique o banco: ");
@@ -68,7 +69,7 @@ public class Main {
 
             case 3:
                 System.out.print("Digite o número da conta: ");
-                numero = Integer.parseInt(scanner.next());
+                numero = scanner.next();
                 System.out.print("Digite a agência: ");
                 agencia = Integer.parseInt(scanner.next());
                 System.out.print("Indique o banco: ");
@@ -86,6 +87,16 @@ public class Main {
                 break;
 
             case 4:
+                System.out.print("Indique a conta origem pelo número: ");
+                String origem = scanner.next();
+                System.out.print("Indique a conta destino pelo número: ");
+                String destino = scanner.next();
+                System.out.print("Indique o valor a ser transferido: ");
+                double valor = Double.parseDouble(scanner.next());
+
+                bank.getContaByNumero(origem);
+                bank.getContaByNumero(destino);
+                bank.Transferir(origem, destino, valor);
 
                 break;
 
@@ -95,9 +106,20 @@ public class Main {
                     System.out.println("Número: " + conta.getNumero());
                     System.out.println("Agência: " + conta.getAgencia());
                     System.out.println("Banco: " + conta.getBanco());
-                    System.out.println("Saldo inicial: " + conta.getSaldo());
+                    System.out.println("Saldo: " + conta.getSaldo());
+                    System.out.println("Impostos: " + conta.getImposto());
                     System.out.println("------------------------------------");
                 }
+
+                break;
+
+            case 0:
+                System.out.println("Operações finalizadas!");
+
+                break;
+
+            default:
+                System.out.println("Opção inválida!");
 
                 break;
         }
