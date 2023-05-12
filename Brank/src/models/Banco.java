@@ -12,8 +12,19 @@ public class Banco {
         contasList.add(conta);
     }
 
-    public void transferir(Conta origem, Conta destino) {
-
+    public void Transferir(Conta origem, Conta destino, double valor) {
+        origem.sacar(valor);
+        destino.depositar(valor);
     }
 
+    public Conta getContaByNumero(String numero) {
+        for (Conta conta : contasList) {
+            if (conta.getNumero().equals(numero))
+                return conta;
+            }
+
+            System.out.println("Conta com número " + numero + " não encontrada");
+            return null;
+
+    }
 }
