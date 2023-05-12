@@ -94,10 +94,10 @@ public class Main {
                 System.out.print("Indique o valor a ser transferido: ");
                 double valor = Double.parseDouble(scanner.next());
 
-                bank.getContaByNumero(origem);
-                bank.getContaByNumero(destino);
-                bank.Transferir(origem, destino, valor);
-
+                Conta contaOrigem = bank.getContaByNumero(origem);
+                Conta contaDestino = bank.getContaByNumero(destino);
+                bank.Transferir(contaOrigem, contaDestino, valor);
+                
                 break;
 
             case 5:
