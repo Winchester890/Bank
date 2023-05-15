@@ -101,7 +101,7 @@ public class Main {
                 bank.Transferir(contaOrigem, contaDestino, valor);
                 
                 System.out.println(" ");
-                System.out.println("R$" + valor + " foram transferidos da conta " + contaOrigem + " para a conta " + contaDestino + " com sucesso!");
+                System.out.println("R$" + valor + " foram transferidos da conta " + contaOrigem.getNumero() + " para a conta " + contaDestino.getNumero() + " com sucesso!");
                 
                 break;
 
